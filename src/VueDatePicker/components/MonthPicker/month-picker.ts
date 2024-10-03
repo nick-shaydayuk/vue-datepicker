@@ -161,6 +161,11 @@ export const useMonthPicker = (props: PickerBasePropsType, emit: VueEmit) => {
         } else if (!modelValue.value) {
             modelValue.value = [monthToDate(month, instance)];
         } else if (checkMinMaxRange(date, modelValue.value)) {
+            // console.log(isDateRangeAllowed([date]))
+            /* console.log(date, modelValue.value, props.range, instance)
+            if (typeof props.range === 'object' && props.range.inPeriodRange) {
+                console.log(1)
+            } */
             modelValue.value = setMonthOrYearRange(modelValue, monthToDate(month, instance), emit);
         }
         nextTick().then(() => {

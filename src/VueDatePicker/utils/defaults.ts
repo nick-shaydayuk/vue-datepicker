@@ -219,6 +219,7 @@ export const getDefaultRangeOptions = (config: RangeProp): RangeConfig => {
         autoRange: undefined,
         fixedStart: false,
         fixedEnd: false,
+        inPeriodRange: false,
     };
     if (typeof config === 'object') {
         return { enabled: true, ...defaultOptions, ...config };

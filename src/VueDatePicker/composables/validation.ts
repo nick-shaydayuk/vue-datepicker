@@ -95,6 +95,7 @@ export const useValidation = (props: PickerBasePropsType | AllPropsType) => {
     const validateMonthYearInRange = (month: number, year: number, isNext: boolean, preventNav: boolean): boolean => {
         let valid = false;
         if (preventNav && (propDates.value.minDate || propDates.value.maxDate)) {
+            console.log(defaultedRange)
             if (propDates.value.minDate && propDates.value.maxDate) {
                 valid = validateBothMinAndMax(month, year, isNext);
             } else if (propDates.value.minDate && validateMinDate(month, year)) {

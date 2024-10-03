@@ -332,6 +332,7 @@ export interface RangeOpts {
     maxRange?: string | number;
     minRange?: string | number;
     autoRange?: string | number;
+    inPeriodRange?: boolean;
 }
 
 export interface RangeConfig extends RangeOpts {

@@ -1,6 +1,20 @@
 <template>
     <div class="wrapper">
-        <Datepicker v-model="selectedDate" placeholder="Select Date" />
+        <Datepicker
+         v-model="selectedDate" 
+         placeholder="Select Date" 
+         locale="ru" 
+         select-text="Выбрать" 
+         cancel-text="Отменить" 
+         :range="{ 
+            maxRange: 729, 
+            disableTimeRangeValidation: false,
+            inPeriodRange: true,
+         }" 
+         :min-date="new Date('01/01/2023')" 
+         :max-date="new Date('11/01/2024')" 
+         month-picker
+         />
     </div>
 </template>
 
